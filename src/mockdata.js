@@ -15,7 +15,7 @@ const mockrouters = {
 };      
       
 Object.keys(mockrouters).forEach((route) => {      
-  const filePath = path.join('', `../src/mockdata/${route}.json`);      
+  const filePath = path.join('', `../public/${route}.json`);      
   
   let routeRouter = express.Router();      
   
