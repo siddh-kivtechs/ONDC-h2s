@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json({ limit: '1mb' })); // Parse JSON bodies
 app.use(express.urlencoded({ limit: '1mb', extended: true })); // Parse URL-encoded bodies
 
-app.set('views', express.static('src/views'));
+app.set('views', 'src/views');
 app.set('view engine', 'ejs');
 
 // Employ mockdataRouter (place after body parsing for POST requests)
