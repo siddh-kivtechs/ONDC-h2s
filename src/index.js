@@ -1,11 +1,14 @@
-import express from 'express';
-import cors from 'cors';
-// Import path if needed elsewhere
-// import path from 'path';
-import { PORT, company_name } from './config.js';
-import mockdataRouter from './mockdata.js';
-import ejsHandler from './ejsHandler.js'; // Import EJS handler  
-import { renderFile } from 'ejs'; // Import renderFile from EJS  
+import express from 'express';      
+import cors from 'cors';      
+import path, { dirname } from 'path';  // Import path along with dirname    
+import { fileURLToPath } from 'url';      
+import os from 'os';      
+import { PORT, company_name } from './config.js';      
+// import { logToFile } from './middleware.js';      
+import mockdataRouter from './routes/mockdata.js';      
+import ejsHandler from './ejsHandler.js'; // Import EJS handler    
+import { renderFile } from 'ejs'; // Import renderFile from EJS    
+
 
 const app = express();
 
