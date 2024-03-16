@@ -3,7 +3,7 @@ import cors from 'cors';
 // Import path if needed elsewhere
 // import path from 'path';
 import { PORT, company_name } from './config.js';
-//import mockdataRouter from './mockdata.js';
+import mockdataRouter from './mockdata.js';
 
 const app = express();
 
