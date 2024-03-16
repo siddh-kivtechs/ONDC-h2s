@@ -5,7 +5,7 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';    
 // import os from 'os';    
 import { PORT, company_name } from './config.js';    
-import { logToFile } from './middleware.js';    
+// import { logToFile } from './middleware.js';    
 import mockdataRouter from './routes/mockdata.js';    
 import ejsHandler from './ejsHandler.js'; // Import EJS handler  
 import { renderFile } from 'ejs'; // Import renderFile from EJS  
