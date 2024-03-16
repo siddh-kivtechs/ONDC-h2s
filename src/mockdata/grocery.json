@@ -1,0 +1,84 @@
+{  
+    "type": "grocery",       
+    "fruits": {    
+        "apples": [  
+            {  
+                "name":"Red Apples",  
+                "brand":"Brand",  
+                "manufacturer": "Manufacturer",  
+                "manufacturer_address": "Address",  
+                "desc": "Description",  
+                "weight": "1kg",  
+                "price": "rs80",  
+                "sellprice":"rs78",  
+                "food_type": "veg",  
+                "country_of_origin": "Country"  
+            }  
+        ],    
+        "bananas": [  
+            {  
+                "name":"Bananas",  
+                "brand":"Brand",  
+                "manufacturer": "Manufacturer",  
+                "manufacturer_address": "Address",  
+                "desc": "Description",  
+                "weight": "1kg",  
+                "price": "rs40",  
+                "sellprice":"rs38",  
+                "food_type": "veg",  
+                "country_of_origin": "Country"  
+            }  
+        ],    
+        "oranges": [  
+            {  
+                "name":"Oranges",  
+                "brand":"Brand",  
+                "manufacturer": "Manufacturer",  
+                "manufacturer_address": "Address",  
+                "desc": "Description",  
+                "weight": "1kg",  
+                "price": "rs70",  
+                "sellprice":"rs68",  
+                "food_type": "veg",  
+                "country_of_origin": "Country"  
+            }  
+        ]    
+    },   
+    "vegetables": {  
+        "carrots": [20,30,40],  
+        "potatoes": [30,35],  
+        "onions": [27]  
+    },  
+    "bakery": {  
+        "bread": [35,40,45],  
+        "cakes": [210,250,280],  
+        "pastries": [40,50,60] 
+    },  
+    "dairy": {  
+        "milk": [30,35],  
+        "cheese": [110,125],  
+        "butter": [
+            {
+                "name":"amul butter 100 gm ",
+                "brand":"amul",
+                "manufacturer": "GCMMF Ltd.",
+                "Manufacturer Address":"Gujarat Co-Operative Milk Marketing Federation Ltd., Anand 388001, Gujarat, India. , Kaira District Co-Operative Milk Producers Union Ltd.,Anand 388001, Gujarat, India.",
+                "desc":"",
+                "weight":"100gm",
+                "price": "rs58",
+                "sellprice":"rs56",
+                "food type":"veg",
+                "Country of Origin":"india"
+            }
+        ]
+    },  
+    "meat": {  
+        "chicken": 180,  
+        "mutton": 600
+    },  
+    "beverages": {  
+        "water": 15,  
+        "juice": [30,40,50,60],  
+        "soda": [20,30,50]  
+    }  
+}  

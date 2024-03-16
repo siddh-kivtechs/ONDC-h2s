@@ -1,0 +1,18 @@
+{  
+    "type":"electronics",  
+    "laptop": {  
+        "brand": "Brand Name",  
+        "model": "Model Name",  
+        "price": 1000  
+    },  
+    "smartphone": {  
+        "brand": "Brand Name",  
+        "model": "Model Name",  
+        "price": 500  
+    },  
+    "tablet": {  
+        "brand": "Brand Name",  
+        "model": "Model Name",  
+        "price": 300  
+    }  
+}  

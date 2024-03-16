@@ -1,0 +1,55 @@
+{  
+	"type": "apparel",  
+	"categories": [  
+		{  
+			"men": [  
+				{  
+					"formal": {  
+						"items": ["suits", "dress shirts", "ties"],  
+						"brands": ["Armani", "Hugo Boss", "Gucci"]  
+					}  
+				},  
+				{  
+					"casual": {  
+						"items": ["t-shirts", "jeans", "sneakers"],  
+						"brands": ["Levi's", "Nike", "Adidas"]  
+					}  
+				}  
+			]  
+		},  
+		{  
+			"women": [  
+				{  
+					"formal": {  
+						"items": ["dresses", "blouses", "skirts"],  
+						"brands": ["Chanel", "Prada", "Gucci"]  
+					}  
+				},  
+				{  
+					"casual": {  
+						"items": ["t-shirts", "jeans", "sneakers"],  
+						"brands": ["Levi's", "Nike", "Adidas"]  
+					}  
+				}  
+			]  
+		},  
+		{  
+			"kids": {  
+				"items": ["shirts", "pants", "shoes"],  
+				"brands": ["Gap", "Zara Kids", "H&M Kids"]  
+			}  
+		},  
+		{  
+			"undergarments": {  
+				"items": ["briefs", "boxers", "bras", "panties"],  
+				"brands": ["Victoria's Secret", "Calvin Klein", "Tommy Hilfiger"]  
+			}  
+		},  
+		{  
+			"socks": {  
+				"items": ["ankle socks", "crew socks", "knee high socks"],  
+				"brands": ["Nike", "Adidas", "Puma"]  
+			}  
+		}  
+	]  
+}

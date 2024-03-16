@@ -1,0 +1,45 @@
+{
+    "type": "mandi",
+    "fruits":
+    {
+        "apples": [
+        {
+            "name": "Red Apples",
+            "brand": "Brand",
+            "manufacturer": "Manufacturer",
+            "manufacturer_address": "Address",
+            "desc": "Description",
+            "weight": "1kg",
+            "price": "rs80",
+            "sellprice": "rs78",
+            "food_type": "veg",
+            "country_of_origin": "Country"
+        }],
+        "bananas": [
+        {
+            "name": "Bananas",
+            "brand": "Brand",
+            "manufacturer": "Manufacturer",
+            "manufacturer_address": "Address",
+            "desc": "Description",
+            "weight": "1kg",
+            "price": "rs40",
+            "sellprice": "rs38",
+            "food_type": "veg",
+            "country_of_origin": "Country"
+        }],
+        "oranges": [
+        {
+            "name": "Oranges",
+            "brand": "Brand",
+            "manufacturer": "Manufacturer",
+            "manufacturer_address": "Address",
+            "desc": "Description",
+            "weight": "1kg",
+            "price": "rs70",
+            "sellprice": "rs68",
+            "food_type": "veg",
+            "country_of_origin": "Country"
+        }]
+    }
+}
