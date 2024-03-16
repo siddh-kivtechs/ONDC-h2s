@@ -1,10 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-// Import path if needed elsewhere
-// import path from 'path';
+
 import { PORT, company_name } from './config.js';
 import mockdataRouter from './mockdata.js';
-
+import ejsHandler from './ejsHandler.js';
 const app = express();
 
 // Enable CORS for specific origin (uncomment if needed)
@@ -16,16 +15,12 @@ const app = express();
 app.use(express.json({ limit: '1mb' })); // Parse JSON bodies
 app.use(express.urlencoded({ limit: '1mb', extended: true })); // Parse URL-encoded bodies
 
+app.set('views', express.static('src/views'));
+app.set('view engine', 'ejs');
+
 // Employ mockdataRouter (place after body parsing for POST requests)
 app.use('/', mockdataRouter);
-
-// GET route (example logic)
-app.get("/", (req, res) => {
-  let data = {};
-  data["GET"] = req.query;
-  data["company_name"] = company_name; // Access config variable
-  res.json(data); // Send JSON response
-});
+app.get('/', ejsHandler);
 
 // POST route (example logic)
 app.post("/", (req, res) => {
