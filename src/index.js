@@ -1,19 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import { dirname, fileURLToPath } from 'path';
 import { PORT, company_name } from './config.js';
-// import { logToFile } from './middleware.js'; // Uncomment if using file logging
-import mockdataRouter from './routes/mockdata.js';
-import ejsHandler from './ejsHandler.js';
-import { renderFile } from 'ejs';
+
+import mockdataRouter from './mockdata.js';
+
 
 const app = express();
 
-// View setup
-app.set('views', path.join(dirname(fileURLToPath(import.meta.url)), 'views'));
-app.engine('ejs', renderFile);
-app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(cors());
@@ -40,9 +34,9 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/', mockdataRouter);
-app.use('/', ejsHandler);
+
 
 // Server start (adjusted for Vercel)
 app.listen(PORT, () => {
-  console.log(`${company_name} Server started on http://localhost:${PORT}`);
+  console.log(`$ Server started on http://localhost:${PORT}`);
 });
