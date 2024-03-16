@@ -1,6 +1,12 @@
 import express from 'express';
 import cors from 'cors';
-
+import path from 'path';   
+import { fileURLToPath } from 'url';  
+import { dirname } from 'path';  
+     
+import fs from 'fs'; // Add this line  
+const __filename = fileURLToPath(import.meta.url);  
+const dirPath = dirname(__filename);  
 import { PORT, company_name } from './config.js';
 import mockdataRouter from './mockdata.js';
 import ejsHandler from './ejsHandler.js';
@@ -14,8 +20,10 @@ const app = express();
 // Built-in body parsing for Express 4.16.0 and above
 app.use(express.json({ limit: '1mb' })); // Parse JSON bodies
 app.use(express.urlencoded({ limit: '1mb', extended: true })); // Parse URL-encoded bodies
-
-app.set('views', 'src/views');
+ 
+  
+// app.set('views',path.join(dirPath, '/src/views');
+app.set('views', './views');
 app.set('view engine', 'ejs');
 
 // Employ mockdataRouter (place after body parsing for POST requests)
