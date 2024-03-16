@@ -7,36 +7,31 @@ import mockdataRouter from './mockdata.js';
 
 
 const app = express();
+// Enable CORS for specific origin
+app.use(cors({
+//   origin: "https://example.com"
+}));
 
+// Parse request body and extended the size to 1mb
 
-app.use(express.json());
-app.use(cors());
+app.use(bodyParser.json({ limit: '1mb' }));
+app.use(bodyParser.urlencoded({ limit: '1mb', extended: true }));
 
-// Middleware (adjusted for Vercel)
-app.use((req, res, next) => {
-  const { method, url } = req;
-  const ipAddress = req.ip;
-
-  // Log to console in Vercel, use logToFile in local if available
-  if (process.env.VERCEL) {
-    console.log(`IP: ${ipAddress}, Method: ${method}, URL: ${url}`);
-  } else {
-    if (typeof logToFile === 'function') {
-      logToFile(ipAddress, `[${method}] ${url}`);
-    } else {
-      console.warn('logToFile function not found. Logging to console instead.');
-      console.log(`IP: ${ipAddress}, Method: ${method}, URL: ${url}`);
-    }
-  }
-
-  next();
+// GET route
+app.get("/", (req, res) => {
+  let data = {};
+  data["GET"] = req.query;
+  res.send(data);
 });
 
-// Routes
-app.use('/', mockdataRouter);
+// POST route
+app.post("/", (req, res) => {
+  console.log("POST request received");
+  let data={};
+   data['POST'] = req.body;
+  res.send(data);
+});
 
-
-// Server start (adjusted for Vercel)
 app.listen(PORT, () => {
-  console.log(`$ Server started on http://localhost:${PORT}`);
+  console.log(`API is listening on port ${PORT}`);
 });
