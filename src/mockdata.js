@@ -1,8 +1,12 @@
 
 import express from 'express';      
-import path from 'path';      
+import path from 'path';   
+import { fileURLToPath } from 'url';  
+import { dirname } from 'path';  
      
 import fs from 'fs'; // Add this line  
+const __filename = fileURLToPath(import.meta.url);  
+const dirPath = dirname(__filename);  
       
 const mockdataRouter = express.Router();      
       
@@ -15,7 +19,7 @@ const mockrouters = {
 };      
       
 Object.keys(mockrouters).forEach((route) => {      
- const filePath = path.join(__dirname, '../public', `${route}.json`);       
+const filePath = path.join(dirPath, '../public', `${route}.json`);     
   
   let routeRouter = express.Router();      
   
